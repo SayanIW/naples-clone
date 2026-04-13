@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naples Motorsports | Exotic Car Dealership in Naples, FL</title>
+    <meta name="description"
+        content="Naples Motorsports is the premier dealer for exotic and luxury cars in Naples, Florida. Ferrari, Lamborghini, Maserati, and more.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #1D1D1D;
+            --bg-card: #262626;
+            --primary-accent: #90C440;
+            /* Lime Green */
+            --primary-accent-hover: #7BA736;
+            --secondary-accent: #FDF700;
+            /* Yellow */
+            --text-white: #FFFFFF;
+            --text-gray: #A0A0A0;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Montserrat', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --container-width: 1320px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-accent);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--text-white);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-accent);
+            color: var(--primary-accent);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-accent);
+            color: #000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(29, 29, 29, 0.98);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--secondary-accent);
+        }
+
+        .top-bar {
+            background-color: #000;
+            padding: 10px 0;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 25px;
+        }
+
+        .contact-info i {
+            color: var(--primary-accent);
+            margin-right: 8px;
+        }
+
+        .nav-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-weight: 700;
+            font-family: var(--font-heading);
+            font-size: 15px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-accent);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .brand-dropdown {
+            position: relative;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--primary-accent);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: calc(100vh - 120px);
+            min-height: 600px;
+            background: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 span {
+            color: var(--primary-accent);
+        }
+
+        .search-bar {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .search-bar select,
+        .search-bar input {
+            flex: 1;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-family: var(--font-body);
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            background-color: var(--primary-accent);
+            color: #000;
+            border: none;
+            padding: 0 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+        }
+
+        /* Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .tab {
+            padding: 10px 25px;
+            border: 1px solid #444;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .tab.active {
+            background-color: var(--secondary-accent);
+            color: #000;
+            border-color: var(--secondary-accent);
+        }
+
+        /* Brand Grid */
+        .brands {
+            padding: 60px 0;
+            background-color: #000;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .brand-item {
+            display: flex;
+            justify-content: center;
+            opacity: 0.6;
+            transition: var(--transition);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--text-white);
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+
+        .brand-item:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+            color: var(--primary-accent);
+        }
+
+        /* Inventory */
+        .inventory {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            line-height: 1;
+        }
+
+        .section-header h2 span {
+            display: block;
+            font-size: 18px;
+            color: var(--primary-accent);
+            margin-bottom: 5px;
+        }
+
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .car-card {
+            background-color: var(--bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-accent);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .car-img {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .car-price {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-accent);
+            color: #000;
+            padding: 8px 15px;
+            font-weight: 800;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+        }
+
+        .car-info {
+            padding: 25px;
+        }
+
+        .car-info h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-white);
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .car-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            font-weight: 500;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .car-meta span i {
+            color: var(--primary-accent);
+            margin-right: 5px;
+        }
+
+        .car-actions {
+            display: flex;
+            gap: 10px;
+            height: 44px;
+            /* Fixed height for consistency */
+        }
+
+        .car-actions .btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            /* Let flex centering handle it */
+            font-size: 11px;
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 100px 0;
+            background-color: #161616;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 50px 30px;
+            background-color: var(--bg-card);
+            border: 1px solid #333;
+            transition: var(--transition);
+        }
+
+        .feature-box:hover {
+            border-color: var(--primary-accent);
+            transform: translateY(-5px);
+        }
+
+        .feature-box i {
+            font-size: 48px;
+            color: var(--primary-accent);
+            margin-bottom: 25px;
+        }
+
+        .feature-box h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .feature-box p {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        /* Sell Section */
+        .sell-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1594732832278-abd644401426?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            position: relative;
+        }
+
+        .sell-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 12px;
+            padding: 60px;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .sell-graphic {
+            flex: 1;
+            position: relative;
+        }
+
+        .sell-text-title {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            z-index: 2;
+        }
+
+        .sell-text-title h2 {
+            font-size: 64px;
+            line-height: 0.8;
+            color: #fff;
+            font-style: italic;
+        }
+
+        .sell-text-title h2 span {
+            color: var(--primary-accent);
+            display: block;
+            margin-left: 40px;
+        }
+
+        .sell-info {
+            flex: 1.2;
+        }
+
+        .sell-info h3 {
+            color: var(--primary-accent);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 35px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            font-size: 36px;
+            font-family: var(--font-heading);
+            color: transparent;
+            -webkit-text-stroke: 1px #0056b3;
+            line-height: 1;
+            font-weight: 800;
+            min-width: 50px;
+        }
+
+        /* Adjust colors based on image (looks like blue/cyan outlines) */
+        .step-number {
+            -webkit-text-stroke: 1px #4682B4;
+        }
+
+        .step-content h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: var(--text-white);
+        }
+
+        .step-content p {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Service Section */
+        .service-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://www.naplesmotorsports.com/wp-content/uploads/service.png') center/cover no-repeat;
+            position: relative;
+        }
+
+        .service-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid #444;
+            background-color: rgba(0, 0, 0, 0.95);
+            border-radius: 12px;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .service-header h2 {
+            color: var(--primary-accent);
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .service-header p {
+            font-size: 15px;
+            color: var(--text-white);
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        .service-content {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        .service-img {
+            flex: 1;
+            border: 1px solid #333;
+        }
+
+        .service-list {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-gray);
+            text-transform: uppercase;
+        }
+
+        .service-item i {
+            color: var(--primary-accent);
+            font-size: 12px;
+        }
+
+        footer {
+            background-color: #000;
+            padding: 80px 0 30px;
+            border-top: 5px solid var(--primary-accent);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-about img {
+            height: 40px;
+            margin-bottom: 25px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 25px;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 30px;
+            color: var(--text-white);
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary-accent);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-contact i {
+            color: var(--primary-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* Mobile */
+        @media (max-width: 1024px) {
+            .inventory-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .inventory-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar {
+                flex-direction: column;
+            }
+
+            .brand-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> (239) 430-5655</span>
+                <span><i class="fas fa-map-marker-alt"></i> 3290 TAMIAMI TRAIL N, NAPLES, FL 34103</span>
+            </div>
+            <div class="top-bar-right">
+                <span class="brand-dropdown">SELECT OTHER BRANDS <i class="fas fa-chevron-down"></i></span>
+                <span style="margin: 0 15px; opacity: 0.3;">|</span>
+                <a href="#" style="color: var(--primary-accent); font-weight: 700;"><i class="fas fa-clock"></i> VIEW
+                    HOURS</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container nav-main">
+            <div class="logo">
+                <img src="https://www.naplesmotorsports.com/images/logo.png" alt="Naples Motorsports">
+            </div>
+            <nav class="nav-links">
+                <a href="#">INVENTORY</a>
+                <a href="#">FINANCING</a>
+                <a href="#">SERVICE</a>
+                <a href="#">SELL/TRADE</a>
+                <a href="#">EVENTS</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CONTACT</a>
+            </nav>
+            <div class="header-actions">
+                <i class="fas fa-heart" style="font-size: 18px; margin-right: 20px; cursor: pointer;"></i>
+                <i class="fas fa-search" style="font-size: 18px; cursor: pointer; color: var(--secondary-accent);"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>UNMATCHED <span>LUXURY</span> & PERFORMANCE</h1>
+            <p style="font-size: 20px; font-weight: 500;">Exotic, Luxury and Muscle Cars in Naples, Florida.</p>
+            <div class="search-bar">
+                <select>
+                    <option>Select Make</option>
+                </select>
+                <select>
+                    <option>Select Model</option>
+                </select>
+                <button>SEARCH INVENTORY</button>
+            </div>
+            <div class="filter-tabs">
+                <div class="tab active">MAKE</div>
+                <div class="tab">MODEL</div>
+                <div class="tab">YEAR</div>
+                <div class="tab">BODY STYLE</div>
+                <div class="tab">LIFESTYLE</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands">
+        <div class="container brand-grid">
+            <div class="brand-item">FERRARI</div>
+            <div class="brand-item">LAMBORGHINI</div>
+            <div class="brand-item">MASERATI</div>
+            <div class="brand-item">MCLAREN</div>
+            <div class="brand-item">PORSCHE</div>
+            <div class="brand-item">ASTON MARTIN</div>
+        </div>
+    </section>
+
+    <section class="sell-section">
+        <div class="sell-container">
+            <div class="sell-graphic">
+                <div class="sell-text-title">
+                    <h2><span></span></h2>
+                </div>
+                <img src="https://www.naplesmotorsports.com/wp-content/uploads/sellimage.png" alt="Exotic Car"
+                    style="transform: scale(1.2); margin-top: 40px;">
+            </div>
+            <div class="sell-info">
+                <h3>WE BUY CARS</h3>
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h4>SUBMIT YOUR VEHICLE INFORMATION</h4>
+                        <p>Fill out the form with your contact information and tell us about your exotic car to the best
+                            of your knowledge.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h4>GET YOUR OFFER YOU CAN COUNT ON</h4>
+                        <p>You'll receive a quick turnaround time where we'll evaluate the information provided,
+                            establish market value, and send you an offer.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h4>WE PICK IT UP. YOU GET PAID ON THE SPOT</h4>
+                        <p>Once you accept our offer, Our team processes the deal, handles all legal transactions, and
+                            your funds are released the same day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section">
+        <div class="service-container">
+            <div class="service-header">
+                <h2>SERVICE YOUR EXOTIC.</h2>
+                <p>Our state of the art shop coupled with our master technicians and unbeatable customer service, allows
+                    us to provide an unparalleled experience. Trained and certified to exotics.</p>
+            </div>
+            <div class="service-content">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Exotic Service">
+                </div>
+                <div class="service-list">
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> LUBE, OIL AND FILTER CHANGE</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> TIRE ROTATION/ALIGNMENT</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> EXHAUST REPLACEMENT</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> CONVERTIBLE TOP REPAIR</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> STICKY BUTTONS</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> INSPECTION/MAINTENANCE</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> WHEEL CHANGE</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> ELECTRICAL SERVICE</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> PICK-UP AND DELIVERY</div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary"
+                style="width: 100%; max-width: 400px; font-size: 18px; padding: 15px;">SCHEDULE YOUR APPOINTMENT</a>
+        </div>
+    </section>
+
+    <section class="inventory container">
+        <div class="section-header">
+            <h2><span>TRENDING COLLECTION</span>LATEST ARRIVALS</h2>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-primary" style="padding: 10px;"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn btn-primary" style="padding: 10px;"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div class="inventory-grid">
+            <!-- Car 1: Bugatti Chiron -->
+            <div class="car-card">
+                <div class="car-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1621135802920-133df287f89c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                    <div class="car-price">$3,850,000</div>
+                </div>
+                <div class="car-info">
+                    <h3>2021 Bugatti Chiron</h3>
+                    <div class="car-meta">
+                        <span><i class="fas fa-tachometer-alt"></i> 2,144 MI</span>
+                        <span><i class="fas fa-cog"></i> W16 QUAD</span>
+                    </div>
+                    <div class="car-actions">
+                        <a href="#" class="btn btn-primary">VIEW DETAILS</a>
+                        <a href="#" class="btn btn-outline">SEND TO PHONE</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 2: Lamborghini Revuelto -->
+            <div class="car-card">
+                <div class="car-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                    <div class="car-price">$699,995</div>
+                </div>
+                <div class="car-info">
+                    <h3>2024 Lamborghini Revuelto Coupe</h3>
+                    <div class="car-meta">
+                        <span><i class="fas fa-tachometer-alt"></i> 1,259 MI</span>
+                        <span><i class="fas fa-bolt"></i> 1001HP HYBRID</span>
+                    </div>
+                    <div class="car-actions">
+                        <a href="#" class="btn btn-primary">VIEW DETAILS</a>
+                        <a href="#" class="btn btn-outline">SEND TO PHONE</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 3: Ferrari Purosangue -->
+            <div class="car-card">
+                <div class="car-img"
+                    style="background-image: url('https://images.unsplash.com/photo-1592198084033-aade902d1aae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                    <div class="car-price">$619,995</div>
+                </div>
+                <div class="car-info">
+                    <h3>2025 Ferrari Purosangue AWD</h3>
+                    <div class="car-meta">
+                        <span><i class="fas fa-tachometer-alt"></i> 70 MI</span>
+                        <span><i class="fas fa-gas-pump"></i> V12 POWER</span>
+                    </div>
+                    <div class="car-actions">
+                        <a href="#" class="btn btn-primary">VIEW DETAILS</a>
+                        <a href="#" class="btn btn-outline">SEND TO PHONE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header" style="text-align: center; display: block; margin-bottom: 80px;">
+                <h2 style="font-size: 42px;"><span>THE NAPLES ADVANTAGE</span>WHY CHOOSE NAPLES MOTORSPORTS?</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <i class="fas fa-car"></i>
+                    <h4>EXOTIC SALES</h4>
+                    <p>Exclusive lineup of hard-to-find exotic cars including Ferrari, Lotus, Lamborghini, and pre-owned
+                        luxury vehicles curated for the most discerning collectors.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-tools"></i>
+                    <h4>ELITE SERVICE</h4>
+                    <p>Certified technicians with decades of experience using advanced diagnostic technology and genuine
+                        OEM parts to maintain your vehicle's peak performance.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h4>CUSTOM FINANCE</h4>
+                    <p>Exceptional lease terms, competitive low interest rates, and a streamlined online buying process
+                        with secure home delivery worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="https://www.naplesmotorsports.com/images/logo.png" alt="Naples Motorsports">
+                    <p>Naples Motorsports is the world's premier destination for exotic, luxury, and muscle cars. Our
+                        passion for performance and dedication to our clients is unmatched.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="font-size: 20px;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>INVENTORY</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Ferrari</a></li>
+                        <li><a href="#">Lamborghini</a></li>
+                        <li><a href="#">McLaren</a></li>
+                        <li><a href="#">Maserati</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="#">Financing</a></li>
+                        <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="#">Service Center</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Meet The Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>GET IN TOUCH</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 3290 TAMIAMI TRAIL N, NAPLES, FL 34103</p>
+                    <p><i class="fas fa-phone"></i> (239) 430-5655</p>
+                    <p><i class="fas fa-envelope"></i> info@naplesmotorsports.com</p>
+                    <div style="margin-top: 25px;">
+                        <a href="#" class="btn btn-primary" style="padding: 10px 20px;">CONTACT US TODAY</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Naples Motorsports. All Rights Reserved.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#">PRIVACY POLICY</a>
+                    <a href="#">TERMS OF USE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(29, 29, 29, 1)';
+                header.style.padding = '5px 0';
+            } else {
+                header.style.backgroundColor = 'rgba(29, 29, 29, 0.98)';
+                header.style.padding = '15px 0';
+            }
+        });
+
+        // Tab Switching Logic (Simulated)
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.car-card, .feature-box').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+    <script src="https://widgets.leadconnectorhq.com/loader.js"
+        data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="69dcb4cad69ee809d7c5df4c"></script>
+</body>
+
+</html>
